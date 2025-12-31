@@ -1,0 +1,21 @@
+{
+  "threads": 50,
+  "delay": 500,
+  "timeout": 15,
+  "proxy_file": "proxies.txt",
+  "check_mode": "generate",
+  "min_length": 3,
+  "max_length": 4,
+  "charset": "abcdefghijklmnopqrstuvwxyz0123456789",
+  "max_generate": 10000,
+  "username_file": "usernames.txt",
+  "output_dir": "hits",
+  "save_valid": true,
+  "save_invalid": false,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+  "api_endpoint": "https://discord.com/api/v9/unique-username/username-attempt-unauthed",
+  "max_retries": 3,
+  "adaptive_delay": true,
+  "max_delay": 3000,
+  "backoff_multiplier": 2.0
+}

@@ -1,0 +1,14 @@
+# Add your proxies here, one per line
+# lines starting with # are ignored
+
+# Supported formats:
+# ip:port
+# ip:port:user:pass
+# user:pass@ip:port
+# http://user:pass@ip:port
+
+# Example:
+# 192.168.1.1:8080
+# 192.168.1.1:8080:username:password
+# username:password@192.168.1.1:8080
+
