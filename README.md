@@ -1,28 +1,35 @@
+<div align="center">
+
 # Discord Username Checker 💎
 
-**Thanks for buying!** A Discord username checker
+A simple Discord username checker with proxy support and username generation.
 
-## ✨ What's Inside
+**Thanks for buying!**
 
-- **Multi-Proxy support** - Works with any proxy format, validates automatically  
-- **Smart generation** - Creates usernames by length (3-6 chars)
-- **Saves Results** - Saves your hits by date
-- **Live progress** - Shows progress as it runs
+</div>
 
-## 🚀 Let's Get Started
+# Showcase
+
+https://github.com/user-attachments/assets/1c49921a-5ace-4da2-83e0-db068128f14c
+
+## Features
+
+* **Proxies**: supports multiple proxy formats
+* **Generator**: generate usernames by length
+* **Username list**: check usernames from a file
+* **Progress**: see checks happen live
+* **Hits**: saves available usernames by date
+
+## Getting Started
 
 1. Run `discord-username-checker.exe`
-2. Add your proxies to `proxies.txt` (file gets created on first run)
+2. Add your proxies to `proxies.txt`
 3. Pick how you want to check
 4. the rest is automated
 
----
+## Proxies
 
-## 📋 Setup
-
-### Proxies (You Need These)
-
-Add them to `proxies.txt` - one per line:
+Add your proxies to `proxies.txt`, one per line:
 
 ```ini
 http://user:pass@proxy.com:8080
@@ -31,11 +38,9 @@ user:pass@proxy.com:8080
 proxy.com:8080
 ```
 
-💡 **Need proxies?** Get some from [proxies.rip](https://proxies.rip/) - they work well
+## Usernames
 
-### Usernames (Optional)
-
-Add specific usernames to check to `usernames.txt`:
+Add usernames you want to check to `usernames.txt`:
 
 ```ini
 username_i_want
@@ -43,55 +48,83 @@ womppp
 damnthatsucks
 ```
 
----
+## Results
 
-## 🎮 How It Works
-
-**[1] Check from file** - Checks your username list  
-**[2] Generate by length** - Creates random usernames and checks them  
-**[3] Settings** - See current settings
-**[4] Exit** - Close the program
-
-## 📁 Your Results
-
-Everything gets saved in `hits/`:
+Hits are saved in the `hits/` folder:
 
 ```ini
 hits/10-24-2025/available.txt
 ```
 
-What you'll see:
+## Settings
 
-```ini
-@username1              ✅ Available
-@username2              ✅ Available  
-```
-
-## ⚙️ Settings
-
-Edit `config.json` if you want to change anything:
+Edit `config.json` to change the settings:
 
 ```json
+```jsonc
 {
-  "threads": 10,
-  "max_generate": 15,
+  // How many checks run at once
+  "threads": 50,
+
+  // Delay between checks (ms)
+  "delay": 500,
+
+  // Request timeout (seconds)
+  "timeout": 15,
+
+  // Where your proxies are
+  "proxy_file": "proxies.txt",
+
+  // Check mode: "generate" or "file"
+  "check_mode": "generate",
+
+  // Min/max generated username length
   "min_length": 3,
-  "max_length": 6
+  "max_length": 4,
+
+  // Characters used for generated usernames
+  "charset": "abcdefghijklmnopqrstuvwxyz1234567890",
+
+  // How many usernames to generate
+  "max_generate": 2000,
+
+  // Username list when using "file" mode
+  "username_file": "usernames.txt",
+
+  // Folder to save results to
+  "output_dir": "hits",
+
+  // Save available usernames
+  "save_valid": true,
+
+  // Save unavailable usernames
+  "save_invalid": false,
+
+  // User-Agent sent with requests
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+
+  // Endpoint used for username checks
+  "api_endpoint": "https://discord.com/api/v9/unique-username/username-attempt-unauthed",
+
+  // Retries if a request fails
+  "max_retries": 3,
+
+  // Automatically slow down when needed
+  "adaptive_delay": true,
+
+  // Max adaptive delay (ms)
+  "max_delay": 3000,
+
+  // How much the delay increases each time
+  "backoff_multiplier": 2.0
 }
 ```
 
----
+## Notes
 
-## 💬 Need Help?
+* Proxies are required
+* This only checks usernames
+* It does not auto-register them
 
-**Message me:** @uhhhwhatever
-
-- Setup help
-- Questions about settings
-- If something isn't working
-- Ideas for new features
-
-## ⚠️ Just So You Know
-
-- **Needs proxies** - Won't work without them
-- **This only checks** - it does not auto-register them
+> yes, this is very old and the video looks like a typical youtube rat, it's not im just a bad editor lmao
+> my username is no longer @uhhhwhatever get my latest contacts from https://yourpov.dev/
