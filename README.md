@@ -130,3 +130,8 @@ Edit `config.json` to change the settings:
 
 > yes, this is very old and the video looks like a typical youtube rat, it's not im just a bad editor lmao
 > my username is no longer @uhhhwhatever get my latest contacts from https://yourpov.dev/
+
+## License
+
+[MIT](LICENSE) @ [yourpov](https://github.com/yourpov)
+
