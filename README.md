@@ -4,6 +4,8 @@
 
 A simple Discord username checker with proxy support and username generation.
 
+released after a year of gatekeeping
+
 **Thanks for buying!**
 
 </div>
